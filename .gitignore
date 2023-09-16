@@ -1,0 +1,15 @@
+/build/
+
+/**/.idea/
+
+# VSCode directory may be ignored, but sometimes things like workspaces can be
+# shared to allow for sharing build configurations.
+# Easy debugger setup is nice for new hires.
+/.vscode/
+!/.vscode/tasks.json
+!/.vscode/launch.json
+
+# Ignore build directories within first layer of the android project.
+# Would opt to glob **/build but maybe someone wants a folder or packaged
+# named build.
+/android/*/build

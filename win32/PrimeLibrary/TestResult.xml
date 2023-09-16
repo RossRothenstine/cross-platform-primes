@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" name="PrimeLibraryTests.exe" fullname="F:/git/cross-platform-seive/win32/PrimeLibrary/build/bin/Debug/PrimeLibraryTests.exe" testcasecount="3" result="Passed" start-time="2023-09-16T07:40:27.0015460Z" end-time="2023-09-16T07:40:27.0275483Z" duration="0.026050" total="3" passed="3" failed="0" inconclusive="0" skipped="0" warnings="0" asserts="6" random-seed="1186189279">
+  <command-line><![CDATA["F:\git\cross-platform-seive\win32\PrimeLibrary\build\bin\Debug\PrimeLibraryTests.exe"]]></command-line>
+  <filter />
+  <test-suite type="Assembly" id="1004" name="PrimeLibraryTests.exe" fullname="F:/git/cross-platform-seive/win32/PrimeLibrary/build/bin/Debug/PrimeLibraryTests.exe" runstate="Runnable" testcasecount="3" result="Passed" start-time="2023-09-16T07:40:27.0015460Z" end-time="2023-09-16T07:40:27.0275483Z" duration="0.026050" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="6">
+    <environment framework-version="3.13.3.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.19043" platform="Win32NT" cwd="F:\git\cross-platform-seive\win32\PrimeLibrary" machine-name="DESKTOP-9E990VB" user="rossr" user-domain="DESKTOP-9E990VB" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="WorkDirectory" value="F:\git\cross-platform-seive\win32\PrimeLibrary" />
+      <setting name="NumberOfTestWorkers" value="32" />
+    </settings>
+    <properties>
+      <property name="_PID" value="13096" />
+      <property name="_APPDOMAIN" value="PrimeLibraryTests.exe" />
+    </properties>
+    <test-suite type="TestSuite" id="1005" name="PrimeTests" fullname="PrimeTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2023-09-16T07:40:27.0065467Z" end-time="2023-09-16T07:40:27.0275483Z" duration="0.020981" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="6">
+      <test-suite type="TestFixture" id="1000" name="LibraryTest" fullname="PrimeTests.LibraryTest" classname="PrimeTests.LibraryTest" runstate="Runnable" testcasecount="3" result="Passed" start-time="2023-09-16T07:40:27.0075458Z" end-time="2023-09-16T07:40:27.0265461Z" duration="0.019461" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="6">
+        <test-case id="1002" name="GetPrimes_Empty" fullname="PrimeTests.LibraryTest.GetPrimes_Empty" methodname="GetPrimes_Empty" classname="PrimeTests.LibraryTest" runstate="Runnable" seed="430616940" result="Passed" start-time="2023-09-16T07:40:27.0095468Z" end-time="2023-09-16T07:40:27.0235462Z" duration="0.014321" asserts="2" />
+        <test-case id="1003" name="GetPrimes_NoNumbers" fullname="PrimeTests.LibraryTest.GetPrimes_NoNumbers" methodname="GetPrimes_NoNumbers" classname="PrimeTests.LibraryTest" runstate="Runnable" seed="765408865" result="Passed" start-time="2023-09-16T07:40:27.0255462Z" end-time="2023-09-16T07:40:27.0255462Z" duration="0.000106" asserts="2" />
+        <test-case id="1001" name="GetPrimes_Simple" fullname="PrimeTests.LibraryTest.GetPrimes_Simple" methodname="GetPrimes_Simple" classname="PrimeTests.LibraryTest" runstate="Runnable" seed="1632796526" result="Passed" start-time="2023-09-16T07:40:27.0255462Z" end-time="2023-09-16T07:40:27.0265461Z" duration="0.000887" asserts="2" />
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
