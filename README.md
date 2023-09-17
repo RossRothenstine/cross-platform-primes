@@ -21,7 +21,14 @@ cmake --build build --config Release
 # Artifacts will be in build/bin
 ```
 
-### Testing
+#### Android
+
+```bash
+cd android
+./gradlew :nativelib:assembleRelease
+```
+
+### Unit Testing
 
 All platforms support WITH_TESTS to build test executables except Android, whose tests are facilitated by the Android Studio test runner.
 
@@ -43,3 +50,20 @@ Android is tested via the Android Studio test runner, which uses emulated device
 cd android
 ./gradlew :nativelib:test
 ```
+
+### Integration Testing
+
+#### Win32
+
+TBD. Needs a C# WPF app.
+
+#### Android
+
+To run on device testing.
+
+```bash
+cd android
+./gradlew :nativelib:connectedAndroidTest
+```
+
+Also, check out the sample application under `android/app`.
