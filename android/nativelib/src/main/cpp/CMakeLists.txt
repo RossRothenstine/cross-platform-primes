@@ -9,7 +9,7 @@ cmake_minimum_required( VERSION 3.22.1 )
 # Since this is the top level CMakeLists.txt, the project name is also accessible
 # with ${CMAKE_PROJECT_NAME} (both CMake variables are in-sync within the top level
 # build script scope).
-project( "libPrimes" )
+project( "PrimesAndroid" )
 
 
 # Would be nice to externalize this relative path somehow. It's kinda ugly and prone to breaking.
@@ -32,7 +32,7 @@ add_subdirectory( "../../../../../core" core )
 # used in the AndroidManifest.xml file.
 add_library( ${CMAKE_PROJECT_NAME} SHARED
     # List C/C++ source files with relative paths to this CMakeLists.txt.
-    lib.cpp
+    PrimeLibAndroid.cpp
 )
 
 # Specifies libraries CMake should link to your target library. You
