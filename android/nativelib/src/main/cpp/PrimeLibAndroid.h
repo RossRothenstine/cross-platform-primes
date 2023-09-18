@@ -8,35 +8,35 @@ namespace android {
 // JNIString is a wrapper around a jstring that automatically releases the string when it goes out of scope.
 class JNIString {
 public:
-    JNIString(JNIEnv* InEnv, jstring InJString) noexcept
-        : Env(InEnv)
-        , JString(InJString)
-        , Chars(Env->GetStringUTFChars(JString, nullptr)) {}
+    JNIString(JNIEnv* env_, jstring jString_) noexcept
+        : env(env_)
+        , jString(jString_)
+        , chars(env->GetStringUTFChars(jString, nullptr)) {}
 
-    JNIString(JNIString&& Other) noexcept
-        : Env(Other.Env)
-        , JString(Other.JString)
-        , Chars(Other.Chars)
+    JNIString(JNIString&& other) noexcept
+        : env(other.env)
+        , jString(other.jString)
+        , chars(other.chars)
     {
-        Other.Env = nullptr;
-        Other.JString = nullptr;
-        Other.Chars = nullptr;
+        other.env = nullptr;
+        other.jString = nullptr;
+        other.chars = nullptr;
     }
 
     ~JNIString() noexcept {
-        if (Env && JString && Chars) {
-            Env->ReleaseStringUTFChars(JString, Chars);
+        if (env && jString && chars) {
+            env->ReleaseStringUTFChars(jString, chars);
         }
     }
 
     const char* Get() const noexcept {
-        return Chars;
+        return chars;
     }
 
 private:
-    JNIEnv* Env;
-    jstring JString;
-    const char* Chars;
+    JNIEnv* env;
+    jstring jString;
+    const char* chars;
 };
 
 }
