@@ -28,5 +28,6 @@ list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" )
 add_subdirectory( src )
 
 if ( PROJECT_IS_TOP_LEVEL AND WITH_TESTS )
+    enable_testing()
     add_subdirectory( test ) 
 endif()

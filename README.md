@@ -32,6 +32,16 @@ cd android
 
 All platforms support WITH_TESTS to build test executables except Android, whose tests are facilitated by the Android Studio test runner.
 
+#### Core
+
+```bash
+cd core
+mkdir build
+cmake -B build -S . -DWITH_TESTS=ON
+cmake --build build --config Debug
+cd build && ctest
+```
+
 #### Win32
 
 ```powershell
