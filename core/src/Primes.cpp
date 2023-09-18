@@ -105,4 +105,12 @@ void GetPrimes(std::vector<int>& indices) noexcept {
         thread.join();
     }
 }
+
+
+std::vector<int> ParsePrimes(std::string_view input) noexcept {
+    std::vector<int> indices = ParseNumbers(input);
+    GetPrimes(indices);
+    return indices;
+}
+
 }
