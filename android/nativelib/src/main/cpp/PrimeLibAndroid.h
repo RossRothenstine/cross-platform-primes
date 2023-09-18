@@ -13,10 +13,11 @@ public:
         , JString(InJString)
         , Chars(Env->GetStringUTFChars(JString, nullptr)) {}
 
-    JNIString(JNIString&& Other) noexcept {
-        Env = Other.Env;
-        JString = Other.JString;
-        Chars = Other.Chars;
+    JNIString(JNIString&& Other) noexcept
+        : Env(Other.Env)
+        , JString(Other.JString)
+        , Chars(Other.Chars)
+    {
         Other.Env = nullptr;
         Other.JString = nullptr;
         Other.Chars = nullptr;
