@@ -88,15 +88,15 @@ std::vector<int> ParseNumbers(std::string_view input) noexcept {
     return output;
 }
 
-void GetPrimes(std::vector<int>& indicies) noexcept {
+void GetPrimes(std::vector<int>& indices) noexcept {
     std::vector<std::thread> threads;
-    threads.reserve(indicies.size());
+    threads.reserve(indices.size());
 
-    for (int i = 0; i < indicies.size(); ++i) {
-        int index = indicies[i];
-        threads.emplace_back([&indicies, i, index]() {
+    for (int i = 0; i < indices.size(); ++i) {
+        int index = indices[i];
+        threads.emplace_back([&indices, i, index]() {
             int prime = FindPrimeAt(index);
-            indicies[i] = prime;
+            indices[i] = prime;
         });
     }
 
