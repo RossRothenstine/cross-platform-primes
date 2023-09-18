@@ -23,7 +23,9 @@ public:
     }
 
     ~JNIString() noexcept {
-        Env->ReleaseStringUTFChars(JString, Chars);
+        if (Env && JString && Chars) {
+            Env->ReleaseStringUTFChars(JString, Chars);
+        }
     }
 
     const char* Get() const noexcept {
