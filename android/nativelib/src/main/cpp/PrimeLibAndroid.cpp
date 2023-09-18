@@ -12,15 +12,12 @@ Java_com_yuki_prime_lib_Primes_getPrimes(JNIEnv* env, jclass clazz, jstring jniN
 
     std::unique_ptr<JNIString> numberString = std::make_unique<JNIString>(env, jniNumberString);
 
-    std::string_view number = numberString->Get();
-    LOGI("Number string: %s", number.data());
-    std::vector<int> indices = primes::ParseNumbers(number);
-    LOGI("Parsed indices: %d", int(indices.size()));
+    LOGI("Number string: %s", numberString->Get());
+    std::vector<int> primes = primes::ParsePrimes(numberString->Get());
+    LOGI("Parsed primes size: %d", int(primes.size()));
 
-    primes::GetPrimes(indices);
-
-    jintArray result = env->NewIntArray(indices.size());
-    env->SetIntArrayRegion(result, 0, indices.size(), indices.data());
+    jintArray result = env->NewIntArray(primes.size());
+    env->SetIntArrayRegion(result, 0, primes.size(), primes.data());
 
     return result;
 }
