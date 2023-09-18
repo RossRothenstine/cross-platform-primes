@@ -35,7 +35,7 @@ namespace primes {
     return number;
 }
 
-std::vector<int> ParseNumbers(const std::string_view& input) noexcept {
+std::vector<int> ParseNumbers(std::string_view input) noexcept {
     std::vector<int> output;
 
     constexpr char charZero = '0';

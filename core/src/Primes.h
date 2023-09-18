@@ -8,7 +8,7 @@ namespace primes {
 // ParseNumbers will find the numbers within a given string.
 // TODO: Unicode support? wstring? Maybe our string impl is already aware, or our platform char is not a simple byte.
 // If there was ever a way to be given invalid input, returning std::optional might be the play with nullopt.
-[[nodiscard]] std::vector<int> ParseNumbers(const std::string_view& input) noexcept;
+[[nodiscard]] std::vector<int> ParseNumbers(std::string_view input) noexcept;
 
 // Given an array of prime indices (e.g., 1, 2, 3), put the corresponding prime index into the array at
 // the same location., e.g., (2, 3, 5).
