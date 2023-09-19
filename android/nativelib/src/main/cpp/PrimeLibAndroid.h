@@ -8,9 +8,9 @@ namespace android {
 // JNIString is a wrapper around a jstring that automatically releases the string when it goes out of scope.
 class JNIString {
 public:
-    JNIString(JNIEnv* env_, jstring jString_) noexcept
-        : env(env_)
-        , jString(jString_)
+    JNIString(JNIEnv* env, jstring jString) noexcept
+        : env(env)
+        , jString(jString)
         , chars(env->GetStringUTFChars(jString, nullptr)) {}
 
     JNIString(JNIString&& other) noexcept
